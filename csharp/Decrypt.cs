@@ -5,13 +5,36 @@ namespace qsharprsa
     //class for brute force decryption written in c#
     class Decrypt
     {
-    
-        public double decryptMessage(int d, int n, int msg){
+        int p=0;
+        int q=0;
+        public double decryptMessageWithKeys(int d, int n, int msg){
             double temp = Math.Pow(msg, d);
             double result = temp%n;
 
 
             return result;
+        }
+        //not finished/tested yet. prime factorization of n
+        //IMPORTANT: We will implement this simple brute force function in q#!
+        public int decryptMessageBruteForce(int n, int e ){
+            
+            for(int i=2; i<Math.Sqrt(n); i++){
+                for(int j=2; j<Math.Sqrt(n);j++){
+                    if(j*i == n){
+                        p=i;
+                        q=j;
+                        break;
+                    }
+                if(j*i == n){
+                        p=i;
+                        q=j;
+                        break;
+                }
+                }
+
+            }
+
+            return 1;
         }
     }
 
