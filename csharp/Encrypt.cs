@@ -5,13 +5,13 @@ namespace qsharprsa
 {
 
 class Encrypt{
-
+//basic implementation of the RSA algorithm
 public void encryptRSA(double p, double q, double e, double msg){
     double n = p*q;
-    double totient = (p-1) * (q-1);
+    double eulertotient = (p-1) * (q-1);
 
-    while(e<totient){
-    double count = gcd((int) e,(int) totient);
+    while(e<eulertotient){
+    double count = gcd((int) e,(int) eulertotient);
     if(count == 1)
         break;
     else
@@ -19,7 +19,7 @@ public void encryptRSA(double p, double q, double e, double msg){
     }
 
     double k = 2;
-    double d = (1+ (k*totient))/e;
+    double d = (1+ (k*eulertotient))/e;
     double c = Math.Pow(msg,e);
     double m = Math.Pow(c,d);
     c= c % n;
