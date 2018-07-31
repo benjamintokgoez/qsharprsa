@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\benja\\Documents\\rsadecoding\\qsharprsa\\qsharprsa.csproj",
+      "projectUniqueName": "c:\\Users\\benja\\Documents\\rsadecoding\\qsharprsa\\csharp\\qsharprsa.csproj",
       "projectName": "qsharprsa",
-      "projectPath": "C:\\Users\\benja\\Documents\\rsadecoding\\qsharprsa\\qsharprsa.csproj",
+      "projectPath": "c:\\Users\\benja\\Documents\\rsadecoding\\qsharprsa\\csharp\\qsharprsa.csproj",
       "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\benja\\Documents\\rsadecoding\\qsharprsa\\obj\\",
+      "outputPath": "c:\\Users\\benja\\Documents\\rsadecoding\\qsharprsa\\csharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
