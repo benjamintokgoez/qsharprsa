@@ -18,8 +18,8 @@ namespace qsharprsa
         //IMPORTANT: We will implement this simple brute force function in q#!
         public int decryptMessageBruteForce(int n, int e ){
             
-            for(int i=2; i<Math.Sqrt(n); i++){
-                for(int j=2; j<Math.Sqrt(n);j++){
+            for(int i=2; i<n/2; i++){
+                for(int j=2; j<n/2;j++){
                     if(j*i == n){
                         p=i;
                         q=j;
