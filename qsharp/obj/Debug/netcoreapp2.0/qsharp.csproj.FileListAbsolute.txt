@@ -1,0 +1,11 @@
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\bin\Debug\netcoreapp2.0\qsharp.deps.json
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\bin\Debug\netcoreapp2.0\qsharp.runtimeconfig.json
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\bin\Debug\netcoreapp2.0\qsharp.runtimeconfig.dev.json
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\bin\Debug\netcoreapp2.0\qsharp.dll
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\bin\Debug\netcoreapp2.0\qsharp.pdb
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\obj\Debug\netcoreapp2.0\qsharp.csprojAssemblyReference.cache
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\obj\Debug\netcoreapp2.0\qsharp.csproj.CoreCompileInputs.cache
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\obj\Debug\netcoreapp2.0\qsharp.AssemblyInfoInputs.cache
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\obj\Debug\netcoreapp2.0\qsharp.AssemblyInfo.cs
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\obj\Debug\netcoreapp2.0\qsharp.dll
+C:\Users\betokgz\Documents\QuantumProjects\qsharprsa\qsharp\obj\Debug\netcoreapp2.0\qsharp.pdb
