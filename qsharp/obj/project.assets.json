@@ -790,23 +790,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\betokgz\\.nuget\\packages\\": {},
+    "C:\\Users\\benja\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\betokgz\\Documents\\QuantumProjects\\qsharprsa\\qsharp\\qsharp.csproj",
+      "projectUniqueName": "c:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\qsharp.csproj",
       "projectName": "qsharp",
-      "projectPath": "C:\\Users\\betokgz\\Documents\\QuantumProjects\\qsharprsa\\qsharp\\qsharp.csproj",
-      "packagesPath": "C:\\Users\\betokgz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\betokgz\\Documents\\QuantumProjects\\qsharprsa\\qsharp\\obj\\",
+      "projectPath": "c:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\qsharp.csproj",
+      "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\betokgz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
