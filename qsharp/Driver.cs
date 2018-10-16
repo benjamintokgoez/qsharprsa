@@ -46,7 +46,7 @@ namespace qsharp
                         M = b;
                         b = tmp;
                     }
-                    //Schritt 3: Ist der ggT ungleich 1 kann a zurückgegeben werden und der klassische Teil ist beendet. Hier nochmal den Algorithmus abklären: Bedeutet das, dass >> ist mir hier ein Denkfehler unterlaufen?
+                    //Schritt 3: Ist der ggT ungleich 1 kann a zurückgegeben werden und der klassische Teil ist beendet.
                     if (M != 1)
                     {
                         //finished = true;
@@ -57,7 +57,7 @@ namespace qsharp
                     {
                         //a & N werden an den Quantenteil übergeben, um dort die kleinste Ordnung r von a in Mod N gleich 1 zu ermitteln.  
                         //QuantPa.QPart1(a);
-                        //VerifyR(4,N);
+                        //VerifyR(4,N); Dieser Aufruf muss nun aus einer anderen Klasse erfolgen
                         finished = true;
                         var period = shorsPeriod.Run(new QuantumSimulator(), N, a).Result;
                         Console.WriteLine("C#: Period of " + N + " is: "+  period);
