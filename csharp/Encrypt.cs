@@ -6,6 +6,7 @@ namespace qsharprsa
 
 class Encrypt{
 //basic implementation of the RSA algorithm
+//Added just for integrity
 public void encryptRSA(double p, double q, double e, double msg){
     double n = p*q;
     double eulertotient = (p-1) * (q-1);

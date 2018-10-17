@@ -5,8 +5,8 @@ using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.MetaData.Attributes;
 
 [assembly: OperationDeclaration("qsharp", "shorsPeriod (N : Int, a : Int) : Int", new string[] { }, "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs", 248L, 9L, 5L)]
-[assembly: OperationDeclaration("qsharp", "vectorTransformation (a : Int, N : Int, p : Int, t : Qubit[]) : ()", new string[] { "Controlled", "Adjoint" }, "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs", 918L, 34L, 76L)]
-[assembly: OperationDeclaration("qsharp", "findingPeriod (N : Int, a : Int) : Int", new string[] { }, "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs", 1220L, 46L, 5L)]
+[assembly: OperationDeclaration("qsharp", "vectorTransformation (a : Int, N : Int, p : Int, t : Qubit[]) : ()", new string[] { "Controlled", "Adjoint" }, "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs", 931L, 33L, 76L)]
+[assembly: OperationDeclaration("qsharp", "findingPeriod (N : Int, a : Int) : Int", new string[] { }, "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs", 1233L, 45L, 5L)]
 #line hidden
 namespace qsharp
 {
@@ -51,25 +51,25 @@ namespace qsharp
             //N=p*q
             //a is co prime to N
             //a^k mod N
-#line 17 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 15 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             if (MicrosoftQuantumCanonIsCoprime.Apply((a, N)))
             {
-#line 18 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 17 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
                 Message.Apply($"Calculate period of {N} mod {a}");
-#line 19 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 18 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
                 var period = findingPeriod.Apply((N, a));
-#line 21 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 20 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
                 return period;
             }
             else
             {
 #line 24 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
                 Message.Apply($"{a} is not coprime to {N}. Try a different a");
-#line 25 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 26 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
                 return 0L;
             }
 
-#line 30 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 29 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             return 0L;
         }
 
@@ -121,7 +121,7 @@ namespace qsharp
         public override Func<(Int64,Int64,Int64,QArray<Qubit>), QVoid> Body => (__in) =>
         {
             var (a,N,p,t) = __in;
-#line 36 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 35 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             MicrosoftQuantumCanonModularMultiplyByConstantLE.Apply((MicrosoftQuantumCanonExpMod.Apply((a, p, N)), N, new Microsoft.Quantum.Canon.LittleEndian(t)));
 #line hidden
             return QVoid.Instance;
@@ -273,42 +273,42 @@ namespace qsharp
         public override Func<(Int64,Int64), Int64> Body => (__in) =>
         {
             var (N,a) = __in;
-#line 51 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 48 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var tempResult = 1L;
-#line 53 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 49 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var bitSize = MicrosoftQuantumCanonBitSize.Apply(N);
-#line 54 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 50 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var bitEstimated = ((2L * bitSize) + 1L);
-#line 57 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 51 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var temp = 0L;
-#line 59 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 53 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var eigenStates = Allocate.Apply(bitSize);
-#line 62 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 56 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var eigenStatesLE = new Microsoft.Quantum.Canon.LittleEndian(eigenStates);
-#line 63 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 57 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             MicrosoftQuantumCanonInPlaceXorLE.Apply((1L, eigenStatesLE));
-#line 65 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 59 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             Message.Apply($"The bitSize of {N} is {bitSize}");
-#line 67 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 61 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var transformation = new Microsoft.Quantum.Canon.DiscreteOracle(vectorTransformation.Partial(new Func<(Int64,QArray<Qubit>), (Int64,Int64,Int64,QArray<Qubit>)>((_arg1) => (a, N, _arg1.Item1, _arg1.Item2))));
-#line 69 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 62 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var phase = MicrosoftQuantumCanonRobustPhaseEstimation.Apply((bitEstimated, transformation, eigenStatesLE));
-#line 71 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 63 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             temp = MicrosoftQuantumExtensionsMathRound.Apply((((phase * MicrosoftQuantumExtensionsConvertToDouble.Apply(2L.Pow(bitEstimated))) / 2D) / MicrosoftQuantumExtensionsMathPI.Apply(QVoid.Instance)));
             //reset all Qubits to save RAM
-#line 73 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 66 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             ResetAll.Apply(eigenStates);
 #line hidden
             Release.Apply(eigenStates);
-#line 76 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 69 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var (k,d) = MicrosoftQuantumCanonContinuedFractionConvergent.Apply((new Microsoft.Quantum.Canon.Fraction((temp, 2L.Pow(bitEstimated))), N));
-#line 77 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 70 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             var (kAbs,dAbs) = (MicrosoftQuantumExtensionsMathAbsI.Apply(k), MicrosoftQuantumExtensionsMathAbsI.Apply(d));
-#line 79 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 71 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             tempResult = ((dAbs * tempResult) / MicrosoftQuantumCanonGCD.Apply((tempResult, dAbs)));
-#line 80 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 73 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             Message.Apply($"Q#: The Period of {a} mod {N} is {tempResult}");
-#line 82 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
+#line 75 "C:\\Users\\benja\\Documents\\qsharprsa\\qsharp\\ShorsPeriod.qs"
             return tempResult;
         }
 
