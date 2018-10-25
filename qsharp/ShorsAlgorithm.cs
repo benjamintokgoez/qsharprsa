@@ -15,22 +15,18 @@ namespace qsharp
             {
                 int Ntemp = N;
 
-                //während keine entsprechende Primzahl gefunden würde läuft diese erste While Schleife
-
-                    //Schritt 1: Ein randomisiertes a<N und a>2 wird gewählt
+                    //Step 1: An a<N and a>2 is randomly selected
                     a = random.Next(3, N);
-                    Console.WriteLine("this is the basic a " + a);
-                    Debug.WriteLine("this is the basic a " + a);
                     int atemp = a;
 
-                    //Schritt 2: der ggT von a und N wird ermittelt und als M ausgegeben
+                    //Step 2: The GCD of a and N is detected and 
                     while (atemp != 0)
                     {
                         int tmp = Ntemp % atemp;
                         Ntemp = atemp;
                         atemp = tmp;
                     }
-                    //Schritt 3: Ist der ggT ungleich 1 kann a zurückgegeben werden und der klassische Teil ist beendet.
+                    //Step 3: If the GCD is not 1 the classic part can be exited.
                     if (Ntemp != 1)
                     {
                         //finished = true;
