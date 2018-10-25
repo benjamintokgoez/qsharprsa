@@ -15,6 +15,7 @@ namespace qsharp
             //Console.WriteLine("Enter a positive integer to factor:");
             //int N = int.Parse(Console.ReadLine());
             //Console.WriteLine(N);
+            //Starts the Shor Algorithm with a public key of 15
             int N = 15;
             ShorsAlgorithm s = new ShorsAlgorithm();
             s.FindGCD(N);
