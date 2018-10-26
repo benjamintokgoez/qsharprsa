@@ -29,15 +29,11 @@ namespace qsharp
                     //Step 3: If the GCD is not 1 the classic part can be exited.
                     if (Ntemp != 1)
                     {
-                        //finished = true;
-                        //Console.WriteLine("this is the basic " + a);
                         FindGCD(N);
                     }
                     else
                     {
-                        //a & N werden an den Quantenteil übergeben, um dort die kleinste Ordnung r von a in Mod N gleich 1 zu ermitteln.  
-                        //QuantPa.QPart1(a);
-                        //VerifyR(4,N); Dieser Aufruf muss nun aus einer anderen Klasse erfolgen
+                        //Getting the smallest order r (period) of a in Mod N equal to 1 from the QuantumSimulator.   
                         int period = (int) shorsPeriod.Run(new QuantumSimulator(), N, a).Result;
                         Console.WriteLine("C#: Period of " + N + " is: "+  period);
                         VerifyR(period, N);
@@ -47,12 +43,12 @@ namespace qsharp
 
             public void VerifyR(int r, int N)
             {
-                //r ist ermittelt. Nun wird überprüft, ob es ungerade ist. Sollte dem so sein wird neu gestartet.
+                //Step 4: Check if r is uneven.
                 if (r % 2 != 0)
                 {
                     FindGCD(N);
                 }
-                //	6. Sollte a^(r/2)=-1(mod N) wird neu gestartet.
+                //	Step 5: Check if a^(r/2)=-1(mod N) or if a^(r/2)=-1(mod N).
                 else
                 {
                     int atemp = a;
@@ -60,7 +56,6 @@ namespace qsharp
                     {
                         atemp *= a;
                     }
-                    Console.WriteLine("this is a to half order r " + atemp);
                     if (N % atemp == -1)
                     {
                         FindGCD(N);
@@ -79,7 +74,7 @@ namespace qsharp
          
             public void FindPnQ(int a, int N)
             {
-                //Gcd(a^(r/2)+1, N) ist ein nicht trivialer Faktor von N.
+                //Gcd(a^(r/2)+1, N) is a non trivial factor of N.
                 Console.WriteLine("Finales a: " + a + " Finales N: " + N);
                 int Ntemp = N;
                 int p = a + 1;
@@ -96,8 +91,7 @@ namespace qsharp
                     q = Ntemp;
                     Ntemp = tmp;
                 }
-                Console.WriteLine("Faktor p: "+p + " und Faktor q: "+q);
-                Debug.WriteLine("Faktor p: " + p + " und Faktor q: " + q);
+                Debug.WriteLine("Private key p: " + p + " and  private key q: " + q + " multiply to the public key: " + N);
             }
            
 
