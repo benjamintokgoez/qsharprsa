@@ -1,13 +1,7 @@
 :: files ::
+QuantumPeriod.qs
 ShorsPeriod.qs
 :: qsim ::
 :: references ::
-C:\Users\benja\.nuget\packages\microsoft.quantum.canon\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Canon.dll
-C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.MetaData.dll
-C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Primitives.dll
-C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Simulation.Common.dll
-C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Simulation.Core.dll
-C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll
-C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Simulation.Simulators.dll
 :: command ::
-dotnet "C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\build\../tools/qsc/qsc.dll" --input "ShorsPeriod.qs" --references "C:\Users\benja\.nuget\packages\microsoft.quantum.canon\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Canon.dll" "C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.MetaData.dll" "C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Primitives.dll" "C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Simulation.Common.dll" "C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Simulation.Core.dll" "C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll" "C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\lib\netstandard2.0\Microsoft.Quantum.Simulation.Simulators.dll" --outputpath obj\qsharp\src\
+dotnet "C:\Users\benja\.nuget\packages\microsoft.quantum.development.kit\0.2.1806.3001-preview\build\../tools/qsc/qsc.dll" --input "QuantumPeriod.qs" "ShorsPeriod.qs" --references "" --outputpath obj\qsharp\src\
