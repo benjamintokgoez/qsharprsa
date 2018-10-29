@@ -1,5 +1,4 @@
 # qsharprsa
-q# project internal
 
 
-An in progres implementation of Shor's algorithm using Q#.
+An in progress implementation of Shor's algorithm using Q#.
